@@ -1,11 +1,11 @@
-Customer_id	Name	Current_bill	Due_Bill	Total
-1	Abrar Shariar	234234	234	234000
-2	Doasd Mirza	3434	34	3400
-3	Galib Mahmud	34234	435	33799
-4	JonSNow	4545	324	4221
-5	Steve Jobs	45453	45	45408
-6	Bill Gates	43534	4	43530
-7	John Watson	45	34	11
-8	Sherlock Holmes	345	23	322
-9	Fahim Khan	345	35	310
-10	Rakib Hasam	345	5	340
+id,name,current_bill,due,total
+1,Abrar Shariar,1231,87,1144
+2,Doasd Mirza,1231,72,1159
+3,Galib Mahmud,21323,54,21269
+4,JonSNow,45,2,43
+5,Steve Jobs,23,2,21
+6,Bill Gates,19203,34,19169
+7,John Watson,2312,34,2278
+8,Sherlock Holmes,123123,56,123067
+9,Fahim Khan,23,2,21
+10,Rakib Hasam,2312,34,2278
