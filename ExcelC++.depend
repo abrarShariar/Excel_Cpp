@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1452150702 source:e:\c++\excelc++\main.cpp
+	<tchar.h>
+	<windows.h>
+
