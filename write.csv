@@ -1,44 +1,19 @@
-
-Address: 
-Id,Name,Current_Bill,Due,Total
-
-
-Address: 221 B
-7,John Watson,2312,34,2278
-8,Sherlock Holmes,123123,56,123067
-
-Address: Banani
-4,JonSNow,45,2,43
-
-Address: Bepari Para
-
-
-
-
-
-
-
-Address: Bogra
-10,Rakib Hasam,2312,34,2278
-
-Address: Dhanmondi
-2,Doasd Mirza,1231,72,1159
-
-Address: Gulshan
-3,Galib Mahmud,21323,54,21269
-
-Address: Mirpur
-1,Abrar Shariar,1231,87,1144
-
-Address: Purba Adalat Para
-
-
-
-
-
-Address: Rangpur
-9,Fahim Khan,23,2,21
-
-Address: USA
-5,Steve Jobs,23,2,21
-6,Bill Gates,19203,34,19169
+,Id,Name,Current_Bill,Due,Total
+221 B
+,7,John Watson,2312,34,2278
+,8,Sherlock Holmes,123123,56,123067
+Banani
+,4,JonSNow,45,2,43
+Bogra
+,10,Rakib Hasam,2312,34,2278
+Dhanmondi
+,2,Doasd Mirza,1231,72,1159
+Gulshan
+,3,Galib Mahmud,21323,54,21269
+Mirpur
+,1,Abrar Shariar,1231,87,1144
+Rangpur
+,9,Fahim Khan,23,2,21
+USA
+,5,Steve Jobs,23,2,21
+,6,Bill Gates,19203,34,19169

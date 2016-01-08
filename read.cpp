@@ -76,8 +76,8 @@ set<string>getAddress(){
 
 //get id of customers specific to one address
 vector<string> getAddressId(string address,vector<string>details){
-        vector<string> resId;
-        string tempAdd;
+        vector<string>resId;
+        string tempAdd="";
        for(int i=1;i<details.size();i++){      //starting from 1 skipping the column labels
             string text=details[i];
             int commaCount=0;
@@ -94,7 +94,7 @@ vector<string> getAddressId(string address,vector<string>details){
 
 //match id from two table
 string matchId(string id,vector<string>&bills){
-    string data;
+    string data="";
     for(int i=0;i<bills.size();i++){
         string checkId=searchId(bills[i]);
         if(checkId==id){
@@ -115,17 +115,26 @@ int main(){
     vector<string>customerDetails=getCustomersDetails();
     vector<string>customerBills=getCustomersBills();
     set<string>address=getAddress();
+    bool showAdd=false;
+
     for(auto it=address.begin();it!=address.end();++it){
-        write<<"\nAddress: "<<*it<<endl;
+        showAdd=false;
             if(it==address.begin()){
-                write<<"Id,Name,Current_Bill,Due,Total"<<endl;
+                write<<",Id,Name,Current_Bill,Due,Total"<<endl;
             }
         vector<string>addressIdList=getAddressId(*it,customerDetails);
         for(int i=0;i<addressIdList.size();i++){
             string idData=matchId(addressIdList[i],customerBills);
-            write<<idData<<endl;
+            if(idData!=""){
+                if(!showAdd){
+                    write<<*it<<endl;
+                    showAdd=true;
+                }
+                write<<","<<idData<<endl;
+            }
         }
     }
+    write.close();
     return 0;
 }
 
