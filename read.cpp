@@ -2,6 +2,7 @@
 #include<vector>
 #include<fstream>
 #include<set>
+#include<map>
 using namespace std;
 
 
@@ -21,7 +22,7 @@ string searchAdd(string data){
         for(int j=0;j<data.length();j++){
             if(data[j]==','){
                 commaCount++;
-                if(commaCount==3){
+                if(commaCount==14){
                     temp=data.substr(start+1,j-start-1);
                     break;
                 }
@@ -31,10 +32,34 @@ string searchAdd(string data){
      return temp;
 }
 
+//map phone number with customer id
+map<string,string>mapPhone(vector<string>details){
+    map<string,string>myMap;
+      for(int i=0;i<details.size();i++){
+            int start=-1;
+            int commaCount=0;
+           string id=searchId(details[i]);
+           string temp=details[i];
+            string data="";
+            for(int j=0;j<temp.length();j++){
+            if(temp[j]==','){
+                commaCount++;
+                if(commaCount==7){
+                    data=temp.substr(start+1,j-start-1);
+                    break;
+                }
+                start=j;
+                }
+            }
+        myMap[id]=data;
+    }
+    return myMap;
+}
+
 //for reading customers name
 vector<string>getCustomersDetails(){
     vector<string>customerName;
-    string fileName="a.csv";
+    string fileName="customers.csv";
     ifstream read;
     read.open(fileName);
 
@@ -43,21 +68,23 @@ vector<string>getCustomersDetails(){
         getline(read,name);
         customerName.push_back(name);
     }
-    return customerName;
     read.close();
+    return customerName;
+
 }
 
 //for reading all data from custometrs bills
 vector<string>getCustomersBills(){
     vector<string>customerBills;
     ifstream read;
-    read.open("b.csv");
+    read.open("customersBills.csv");
 
     while(read.good()){
         string temp;
         getline(read,temp);
         customerBills.push_back(temp);
     }
+    read.close();
     return customerBills;
 }
 
@@ -106,74 +133,54 @@ string matchId(string id,vector<string>&bills){
     return data;
 }
 
+//check for duplicate address
+int addressDuplicate(string add,set<string>addList){
+        int duplicate=0;
+        for(auto it=addList.begin();it!=addList.end();it++){
+            if(add==*it){
+                duplicate++;
+            }
+        }
+        return duplicate;
+}
+
+//set Name=first_name+last_name
+
+
 //test & trail
 int main(){
-    ofstream write;
-    write.open("write.csv");
-
+    //ofstream write;
+    //write.open("write.csv");
 //match id-address and write output to a file
+
     vector<string>customerDetails=getCustomersDetails();
     vector<string>customerBills=getCustomersBills();
     set<string>address=getAddress();
-    bool showAdd=false;
+    map<string,string>phoneMap=mapPhone(customerDetails);
 
+    bool showAdd=false;
     for(auto it=address.begin();it!=address.end();++it){
         showAdd=false;
             if(it==address.begin()){
-                write<<",Id,Name,Current_Bill,Due,Total"<<endl;
+                //cout<<",Id,Name,Current_Bill,Due,Total"<<endl;
             }
-        vector<string>addressIdList=getAddressId(*it,customerDetails);
+        vector<string>addressIdList=getAddressId(*it,customerDetails);      //all id of a particular address
         for(int i=0;i<addressIdList.size();i++){
             string idData=matchId(addressIdList[i],customerBills);
             if(idData!=""){
                 if(!showAdd){
-                    write<<*it<<endl;
+                    cout<<"\n\n"<<*it<<endl;
                     showAdd=true;
                 }
-                write<<","<<idData<<endl;
+
+                cout<<idData<<endl;
             }
         }
     }
-    write.close();
+
+    //write.close();
     return 0;
 }
-
-/*
-    vector<string>myBill=getCustomersBills();
-    string chk;
-    cin>>chk;
-    cout<<matchId(chk,myBill)<<endl;
-    */
-
-/*
-    vector<string>bills=getCustomersBills();
-    for(int i=0;i<bills.size();i++){
-        cout<<bills[i]<<endl;
-    }
-   */
-
-
-
-/*
-    vector<string>details=getCustomersDetails();
-    string add;
-    getline(cin,add);
-    cout<<getAddressId(add,details)<<endl;
-*/
-
-
-
-    /*
-    vector<string>myVec=getCustomersDetails();
-    for(int i=0;i<myVec.size();i++){
-        cout<<myVec[i]<<endl;
-    }
-    cout<<"\n\n\n"<<endl;
-    vector<string>bills=getCustomersBills();
-    for(int i=0;i<bills.size();i++){
-        cout<<bills[i]<<endl;
-    }
-    */
 
 
 
