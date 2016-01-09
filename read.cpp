@@ -206,8 +206,8 @@ string getFullName(string id,vector<string>details){
 
 //test & trail
 int main(){
-    //ofstream write;
-    //write.open("write.csv");
+    ofstream write;
+    write.open("write.csv");
 //match id-address and write output to a file
 
     vector<string>customerDetails=getCustomersDetails();
@@ -219,14 +219,14 @@ int main(){
     for(auto it=address.begin();it!=address.end();++it){
         showAdd=false;
             if(it==address.begin()){
-                cout<<"Id,Name,Phone,Current_Bill,Due,Total"<<endl;
+                write<<"Id,Name,Phone,Current_Bill,Due,Total\n"<<endl;
             }
         vector<string>addressIdList=getAddressId(*it,customerDetails);      //all id of a particular address
         for(int i=0;i<addressIdList.size();i++){
             string idData=matchId(addressIdList[i],customerBills);
             if(idData!=""){
                 if(!showAdd){
-                    cout<<"\n\n"<<","<<*it<<endl;
+                    write<<"\nADDRESS: "<<*it<<endl;
                     showAdd=true;
                 }
                 //preparing output data
@@ -234,11 +234,11 @@ int main(){
                 string phone=phoneMap[id];
                 string name=getFullName(id,customerDetails);
                 string bill=searchBill(idData);
-                cout<<id<<","<<name<<","<<phone<<","<<bill<<endl;
+                write<<id<<","<<name<<","<<phone<<","<<bill<<endl;
             }
         }
     }
-    //write.close();
+    write.close();
     return 0;
 }
 
