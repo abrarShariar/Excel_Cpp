@@ -32,6 +32,41 @@ string searchAdd(string data){
      return temp;
 }
 
+string searchFirstName(string data){
+     int commaCount=0;
+        int start=-1;
+        string temp;
+        for(int j=0;j<data.length();j++){
+            if(data[j]==','){
+                commaCount++;
+                if(commaCount==3){
+                    temp=data.substr(start+1,j-start-1);
+                    break;
+                }
+                start=j;
+            }
+    }
+     return temp;
+}
+
+
+string searchLastName(string data){
+     int commaCount=0;
+        int start=-1;
+        string temp;
+        for(int j=0;j<data.length();j++){
+            if(data[j]==','){
+                commaCount++;
+                if(commaCount==4){
+                    temp=data.substr(start+1,j-start-1);
+                    break;
+                }
+                start=j;
+            }
+    }
+     return temp;
+}
+
 //map phone number with customer id
 map<string,string>mapPhone(vector<string>details){
     map<string,string>myMap;
@@ -145,7 +180,11 @@ int addressDuplicate(string add,set<string>addList){
 }
 
 //set Name=first_name+last_name
-
+string getFullName(string data){
+    string f_name=searchFirstName(data);
+    string l_name=searchLastName(data);
+    return f_name+" "+l_name;
+}
 
 //test & trail
 int main(){
@@ -172,8 +211,13 @@ int main(){
                     cout<<"\n\n"<<*it<<endl;
                     showAdd=true;
                 }
+                //cout<<idData<<endl;
+                //preparing output data
+                string id=searchId(idData);
+                string phone=phoneMap[id];
+                string name=getFullName();
+                cout<<id<<","<<phone<<endl;
 
-                cout<<idData<<endl;
             }
         }
     }
@@ -181,7 +225,6 @@ int main(){
     //write.close();
     return 0;
 }
-
 
 
 

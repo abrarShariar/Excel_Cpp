@@ -1,19 +1,372 @@
-,Id,Name,Current_Bill,Due,Total
-221 B,,,,,
-,7,John Watson,2312,34,2278
-,8,Sherlock Holmes,123123,56,123067
-Banani,,,,,
-,4,JonSNow,45,2,43
-Bogra,,,,,
-,10,Rakib Hasam,2312,34,2278
-Dhanmondi,,,,,
-,2,Doasd Mirza,1231,72,1159
-Gulshan,,,,,
-,3,Galib Mahmud,21323,54,21269
-Mirpur,,,,,
-,1,Abrar Shariar,1231,87,1144
-Rangpur,,,,,
-,9,Fahim Khan,23,2,21
-USA,,,,,
-,5,Steve Jobs,23,2,21
-,6,Bill Gates,19203,34,19169
+Id,Name,Phone,Current_Bill,Due,Total
+
+
+	
+Masum (ID: tjjxxs), ,1671918181,,"1,500.00",800,"2,300.00"
+Ashdull Bin Zahid, ,1711125051,,500,0,500
+
+
+	"Adalat Para
+Shohan , ,,,"1,000.00",0,"1,000.00"
+
+
+	"Apartment
+Md. Aminul Islam (Parvez) (ID: lam), ,1713060014,,500,0,500
+
+
+	"Bapari Para
+Md. Hillol Biswas, ,1760246171,,"1,500.00",0,"1,500.00"
+Ariful , ,,,"2,000.00",0,"2,000.00"
+Sagir, ,,,"1,500.00",0,"1,500.00"
+Mahfuz, ,,,"2,000.00",0,"2,000.00"
+Saurav, ,,,"1,000.00",0,"1,000.00"
+Robin, ,,,500,0,500
+Titash, ,,,"1,000.00",0,"1,000.00"
+
+
+	"Bepari Para
+Badsha, ,,,500,0,500
+AkashSK, ,,,"2,000.00","1,500.00","3,500.00"
+Sazibsk, ,,,"2,000.00",0,"2,000.00"
+Mirza Prangon, ,,,"2,000.00",0,"2,000.00"
+Hotel All-Foysal Home, ,,,"1,000.00",0,"1,000.00"
+Sujon BP, ,,,"1,000.00",0,"1,000.00"
+
+
+	"Biswas Betka
+Moshfiq, ,,,500,0,500
+
+
+	"C.D.C. Shopping Complex
+Utsso Cyber Net,Kamruzzaman ,,,"2,000.00",0,"2,000.00"
+
+
+	"Green Road
+Jakir Hossain, ,,,500,0,500
+
+
+	"Islam Market
+Arpita Music Zone, ,1936852273,,"2,000.00",0,"2,000.00"
+
+
+	"Kazi Office Road
+Saba Tasnim Shoury, ,,,"1,500.00",0,"1,500.00"
+
+
+	"Keya Hall
+Bachu Ahamed, ,1676982269,,"1,000.00","1,000.00","2,000.00"
+
+
+	"Old Adalat Road
+Shah Mohammad Sagir & Co. LTD., ,1924632202,,500,0,500
+
+
+	"Pawra Market
+Antor Mobile,Rupak ,1729092935,,"1,500.00",800,"2,300.00"
+sanjay karmakar,sajnay ,1822686826,,500,600,"1,100.00"
+
+
+	"Purba Adalat Para
+Khairul Islam, ,,,500,0,500
+Sakib Ahamed, ,1753992267,,"1,500.00",0,"1,500.00"
+HImu, ,,,500,0,500
+
+
+	"Purbo Adalat Para
+Rafi Khan, ,,,500,0,500
+
+
+	"Rukunikanta School
+Fazley Rabby Khan, ,,,500,0,500
+
+
+	"Shantikunja Mor
+Wakil Bhuiyan, ,,,"1,500.00",0,"1,500.00"
+Asif Iqbal Khan, ,,,"2,000.00",0,"2,000.00"
+Shihab, ,,,"1,500.00",0,"1,500.00"
+
+
+	"Shop #36
+S. P. Black, ,1683566809,,500,0,500
+
+
+	"Six Ani Pukur Par
+sakibtp,Sakib ,,,"1,300.00",0,"1,300.00"
+
+
+	"Supari Bagan Road
+Md. Zahidul Islam, ,1730017334,,"1,000.00","1,000.00","2,000.00"
+
+
+	"Tangail Branch
+Agrani Bank Limited, ,01819-412966,,"1,000.00",0,"1,000.00"
+
+
+	2 Bacic Road
+Sam Engineers,Engr. Md. Abdus Salam Miah ,1711430213,,500,0,500
+
+
+	6 Ani Bazar
+Shuvro Roy, ,1781599685,,500,0,500
+Nestle, ,,,700,0,700
+
+
+	Adala Para (Shopon Vai Basha)
+Rubel , ,,,500,0,500
+
+
+	Adalat Para
+Rodmi Islam, ,,,"1,000.00",0,"1,000.00"
+
+
+	Adalat Para 
+Mahin, ,,,500,500,"1,000.00"
+
+
+	Ali Complex (4th) Floor
+Razon, ,1712908054,,"1,000.00",0,"1,000.00"
+
+
+	At Pukur Par
+Md. Asad Miah, ,1521447312,,"1,000.00",0,"1,000.00"
+
+
+	Bara kalibari Road
+Sourav Basak (ID: sourav), ,1684911967,,"1,000.00",0,"1,000.00"
+Sure Cash, ,,,0,"1,000.00","1,000.00"
+
+
+	Basail Sadar
+Khans IT,Md. Rejoan Tanvir Khan  ,1724101031,,"6,000.00",0,"6,000.00"
+
+
+	Biswas Betka
+Md. Palash Ahammed, ,1715511016,,"1,000.00",0,"1,000.00"
+Shajedur Rahman Swajan, ,1559753931,,500,0,500
+Zim Islam, ,,,500,0,500
+Arsujon, ,,,500,0,500
+
+
+	Biswas Betka 
+MD. Abdur Rahmin, ,,,500,0,500
+Shawon (ID  shawonbetka), ,,,"1,000.00",0,"1,000.00"
+Ayon Sarkar, ,,,500,0,500
+
+
+	Biwash Betka
+Sanjoy Das, ,,,500,0,500
+
+
+	C.D.C. Shopping Complex
+Tattkhanik Computer,Faruk Khan,1717534439,,500,0,500
+
+
+	CDC Shopping Complex
+Network Village,Rishad Khan,,,500,0,500
+
+
+	CDC Shopping Complex (1st Floor)
+Saim Cyber Net, ,,,"1,000.00",0,"1,000.00"
+
+
+	Choto Pukur Par 
+Ananda Ghosh ( ID: repulsive), ,,,500,0,500
+
+
+	Choy Ani Bazar
+Masum (ID: masum), ,,,800,0,800
+
+
+	Club Road
+Sujon , ,1552664080,,400,0,400
+
+
+	Club Road 
+Rodela, ,,,"1,000.00",0,"1,000.00"
+
+
+	College Gate 
+Arpaarna,Anup Saha ,,,"1,000.00",0,"1,000.00"
+
+
+	East Adalat Para
+Ahsan Z. Khan, ,1717100001,,"2,000.00","1,000.00","3,000.00"
+Mehtab (Id: Babu), ,1711193809,,"2,000.00",0,"2,000.00"
+
+
+	Fire Service Road
+Rafi, ,,,"1,000.00",0,"1,000.00"
+
+
+	Green Road 
+Reza Ahamed, ,,,"1,000.00",0,"1,000.00"
+Hafizur Rahman Parvas, ,,,500,0,500
+
+
+	Hazi Mansion (2nd Floor)
+Green Delta Insurance, ,,,500,0,500
+
+
+	Kalibari Road
+Chad,chad ,,,500,0,500
+Nirmal Dutta, ,,,300,300,"1,500.00"
+Nirmal Karmaker, ,,,500,0,500
+
+
+	Mahmudul Len
+Anik Dental,Sumon ,,,"1,000.00",0,"1,000.00"
+
+
+	Main Road
+Audio Park,Ikbal Hossain ,,,3500,0,"3,500.00"
+Amena Press, ,,,700,0,700
+
+
+	Masjid Road
+Tahsin Mahadi , ,1706015445,,"1,500.00",0,"1,500.00"
+
+
+	Miah Para 
+Md Ismail Hossen (Rajib), ,,,"1,000.00",0,"1,000.00"
+Homayun , ,,,500,0,500
+
+
+	Mosjid Road
+Reason Talukdar, ,1682684213,,"1,000.00",0,"1,000.00"
+
+
+	Moszid Road
+Anupam, ,1986725317,,"1,000.00",0,"1,000.00"
+Zassiya,Zassiya Jayaan,1674936373,,"1,000.00",0,"1,000.00"
+Partha, ,1838085727,,500,0,500
+Alvi Sany, ,1682401697,,"1,500.00",0,"3,000.00"
+Showkat, ,1713504855,,300,300,600
+Talha, ,,,500,500,"1,000.00"
+Md. Aslam Hossain, ,,,"1,500.00",0,"1,500.00"
+Puja Sharee, ,1912586878,,700,0,700
+George Babu, ,1714392667,,500,0,500
+Shamsur Rahman Shammo, ,1713584605,,"1,500.00",0,"1,500.00"
+Emrul, ,,,500,0,500
+
+
+	Mymenshing Road
+Shahin Motors, ,,,500,0,500
+
+
+	Mymenshingh Road
+Barrister Shamim, ,,,0,"3,000.00","3,000.00"
+
+
+	Patch Ani Bazar
+Nabajug Press, ,,,700,0,700
+
+
+	Public Library Market (1st Floor)
+Dot Net Computers, ,,,"2,000.00",0,"2,000.00"
+
+
+	Puraton Bus Stand
+Shuvrozz, ,,,"1,000.00",0,"1,000.00"
+
+
+	Purba Adalat Para
+Mohammad Faruk Hossain, ,1788994484,,500,0,500
+Shakil, ,1925497766,,500,0,500
+Shuvo, ,1675269943,,500,0,500
+Imran Hossain, ,,,500,500,"1,000.00"
+Jhalak Vai, ,1925867686,,700,0,700
+Sazzad, ,1712991987,,500,0,500
+Kourab Saha, ,1681103279,,"1,000.00",0,"1,000.00"
+Shakon Hasan, ,,,"1,000.00",0,"1,000.00"
+Sopan, ,1716309477,,"1,000.00",0,"1,000.00"
+Owahedul islam (Mohon), ,1704031216,,500,250,750
+Hasan Mia, ,,,500,0,500
+Ashraful Islam, ,1914318027,,500,0,500
+Bidhan,Bidhan ,,,300,300,600
+Khairul, ,,,500,0,600
+Pranto, ,,,"1,000.00","1,000.00","2,000.00"
+Tanvir Ahmed, ,1681575609,,"1,000.00",0,"1,000.00"
+Tamim, ,,,500,0,500
+Sabrul Vuiya Hridoy, ,1778974526,,500,0,500
+Tamjid, ,,,500,0,500
+Sumon, ,,,500,0,500
+yousuf  Chowdhury, ,1758652855,,"2,000.00",0,"2,000.00"
+Ruhul, ,,,"1,000.00",0,"1,000.00"
+Naushabahanrasha, ,,,500,0,500
+
+
+	Purbo Adalat Para
+Sanu, ,,,500,0,500
+
+
+	Purbo Adalat Para 
+Munna824, ,,,"1,000.00",0,"1,000.00"
+
+
+	Purbo Adalat para
+Jewel (ID: tonmoy123), ,1677048944,,"1,000.00",0,"1,000.00"
+
+
+	Registry Para
+Pronoy, ,,,"1,000.00",0,"1,000.00"
+
+
+	Registry Para 
+Refugee Rahmat, ,,,500,0,500
+
+
+	Rokoni kanto School
+Palash Vai, ,,,0,500,500
+
+
+	Saha Para
+Mezbah Alam, ,,,"1,000.00",0,"1,000.00"
+
+
+	Shantikunja Mor
+Sajib Chakma, ,1534761432,,"1,000.00",0,"1,000.00"
+
+
+	Sobur KHan Plaza
+Match Ranga , ,,,"1,500.00",0,"1,500.00"
+
+
+	Soto Kalibari Road
+Murad Siddique, ,,,"2,000.00",0,"2,000.00"
+
+
+	Tangail Plaza
+Sufiana, ,,,"1,000.00",0,"1,000.00"
+
+
+	Thana Para
+Tushar, ,,,"1,000.00",0,"1,000.00"
+Rubons, ,1717070868,,"1,500.00",0,"1,500.00"
+Mithun Chandra Dey, ,1911962833,,500,0,500
+Rocky Talukder , ,,,"1,500.00",0,"1,500.00"
+Dukhu, ,,,500,0,500
+Riad Arefin Shuvo, ,,,500,0,500
+MD. Hassan Shaheed , ,,,500,0,500
+Shuvo Khan, ,1681680167,,500,0,500
+Shishir Talukder, ,1712706639,,"2,000.00",0,"2,000.00"
+
+
+	Thana Para 
+Mustak Vai, ,,,"1,000.00",0,"1,000.00"
+Agrani Bank LTD. Zonal Office, ,1797408243,,"1,500.00",0,"1,500.00"
+
+
+	Thana Para Malancho Hall Road
+Mahmudul Hasan , ,,,"1,500.00",0,"1,500.00"
+
+
+	Thana Para Rupobani Holl Road
+Molla, ,,,500,0,500
+
+
+	Victoria Road
+Rajib Saha, ,1687110792,,500,0,500
+Sony Music, ,,,"1,500.00",0,"1,500.00"
+Choto Bazar, ,,,"1,500.00",0,"1,500.00"
+Jamil Digital Video, ,,,500,0,500
+Live Ware, ,,,500,0,500
