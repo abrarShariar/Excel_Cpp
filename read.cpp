@@ -204,6 +204,17 @@ string getFullName(string id,vector<string>details){
 }
 
 
+
+//clean string
+string cleanString(string text){
+    for(int i=0;i<text.length();i++){
+        if(text[i]=='"'){
+            text.erase(text.begin()+i);
+        }
+    }
+    return text;
+}
+
 //test & trail
 int main(){
     ofstream write;
@@ -226,13 +237,16 @@ int main(){
             string idData=matchId(addressIdList[i],customerBills);
             if(idData!=""){
                 if(!showAdd){
-                    write<<"\nADDRESS: "<<*it<<endl;
+                    string add=*it;
+                    add=cleanString(add);
+                    write<<"\nADDRESS: "<<add<<endl;
                     showAdd=true;
                 }
                 //preparing output data
                 string id=searchId(idData);
                 string phone=phoneMap[id];
                 string name=getFullName(id,customerDetails);
+
                 string bill=searchBill(idData);
                 write<<id<<","<<name<<","<<phone<<","<<bill<<endl;
             }
