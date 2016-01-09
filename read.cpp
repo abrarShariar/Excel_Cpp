@@ -34,6 +34,7 @@ string searchAdd(string data){
      return temp;
 }
 
+//extract first name from data
 string searchFirstName(string data){
      int commaCount=0;
         int start=-1;
@@ -51,7 +52,7 @@ string searchFirstName(string data){
      return temp;
 }
 
-
+//extract second name from data
 string searchLastName(string data){
      int commaCount=0;
         int start=-1;
@@ -67,6 +68,14 @@ string searchLastName(string data){
             }
     }
      return temp;
+}
+
+//extract bill  from data
+string searchBill(string data){
+        string bill="";
+        size_t index=data.find_first_of(",");
+        bill=data.substr(index+1,data.length()-index+1);
+        return bill;
 }
 
 //map phone number with customer id
@@ -194,6 +203,7 @@ string getFullName(string id,vector<string>details){
     return fullName;
 }
 
+
 //test & trail
 int main(){
     //ofstream write;
@@ -209,22 +219,22 @@ int main(){
     for(auto it=address.begin();it!=address.end();++it){
         showAdd=false;
             if(it==address.begin()){
-                //cout<<",Id,Name,Current_Bill,Due,Total"<<endl;
+                cout<<"Id,Name,Phone,Current_Bill,Due,Total"<<endl;
             }
         vector<string>addressIdList=getAddressId(*it,customerDetails);      //all id of a particular address
         for(int i=0;i<addressIdList.size();i++){
             string idData=matchId(addressIdList[i],customerBills);
             if(idData!=""){
                 if(!showAdd){
-                    cout<<"\n\n"<<*it<<endl;
+                    cout<<"\n\n"<<","<<*it<<endl;
                     showAdd=true;
                 }
-                //cout<<idData<<endl;
                 //preparing output data
                 string id=searchId(idData);
                 string phone=phoneMap[id];
                 string name=getFullName(id,customerDetails);
-                cout<<id<<","<<name<<","<<phone<<endl;
+                string bill=searchBill(idData);
+                cout<<id<<","<<name<<","<<phone<<","<<bill<<endl;
             }
         }
     }
