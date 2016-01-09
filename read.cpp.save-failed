@@ -187,7 +187,7 @@ string getFullName(string id,vector<string>details){
     for(int i=0;i<details.size();i++){
             string checkId=searchId(details[i]);
             if(checkId==id){
-                fullName=searchFirstName(details[i])+" "+searchLastName(details[i]);
+                fullname=searchFirstName(details[i])+" "+searchLastName(details[i]);
                 break;
             }
     }
@@ -224,7 +224,7 @@ int main(){
                 string id=searchId(idData);
                 string phone=phoneMap[id];
                 string name=getFullName(id,customerDetails);
-                cout<<id<<","<<name<<","<<phone<<endl;
+                cout<<id<<","<<phone<<endl;
             }
         }
     }
