@@ -1,11 +1,63 @@
 //ExcelC++
 #include<iostream>
+#include<dirent.h>
+#include<cstdio>
 #include<vector>
 #include<fstream>
 #include<set>
 #include<map>
 using namespace std;
 
+
+
+//customers details fileName
+string getDetailsFileName(){
+const char *location=".\\customersDetails";
+    DIR *dir;
+    struct dirent *ent;
+    int index=0;
+    string fileName;
+
+    if ((dir = opendir (location)) != NULL) {
+    /* print all the files and directories within directory */
+    while ((ent = readdir (dir)) != NULL) {
+        if(index!=0 && index!=1){
+            fileName=ent->d_name;
+        }
+        index++;
+    }
+    closedir (dir);
+    } else {
+    /* could not open directory */
+    perror ("");
+    }
+    return fileName;
+}
+
+//bills file name
+string getBillsFileName(){
+    const char *location=".\\customersBills";
+    DIR *dir;
+    struct dirent *ent;
+    int index=0;
+    string fileName;
+
+    if ((dir = opendir (location)) != NULL) {
+    /* print all the files and directories within directory */
+    while ((ent = readdir (dir)) != NULL) {
+        if(index!=0 && index!=1){
+            fileName=ent->d_name;
+        }
+        index++;
+    }
+    closedir (dir);
+    } else {
+    /* could not open directory */
+    perror ("");
+    }
+    return fileName;
+
+}
 
 
 //extract id from data
@@ -103,11 +155,12 @@ map<string,string>mapPhone(vector<string>details){
 }
 
 //for reading customers name
-vector<string>getCustomersDetails(){
+vector<string>getCustomersDetails(string fileName){
     vector<string>customerName;
-    string fileName="customers.csv";
+    string location="customersDetails\\"+fileName;
+    //string fileName="customers.csv";
     ifstream read;
-    read.open(fileName);
+    read.open(location);
 
     while(read.good()){
         string name;
@@ -116,14 +169,14 @@ vector<string>getCustomersDetails(){
     }
     read.close();
     return customerName;
-
 }
 
 //for reading all data from custometrs bills
-vector<string>getCustomersBills(){
+vector<string>getCustomersBills(string fileName){
     vector<string>customerBills;
+    string location="customersBills\\" + fileName;
     ifstream read;
-    read.open("customersBills.csv");
+    read.open(location);
 
     while(read.good()){
         string temp;
@@ -137,7 +190,8 @@ vector<string>getCustomersBills(){
 //get address from the customer's details table
 set<string>getAddress(){
        set<string>addressList;
-       vector<string>details=getCustomersDetails();
+       string fileName=getDetailsFileName();
+       vector<string>details=getCustomersDetails(fileName);
 
         for(int i=1;i<details.size();i++){      //starting from 1 skipping the column labels
             string text=details[i];
@@ -148,7 +202,7 @@ set<string>getAddress(){
 }
 
 //get id of customers specific to one address
-vector<string> getAddressId(string address,vector<string>details){
+vector<string>getAddressId(string address,vector<string>details){
         vector<string>resId;
         string tempAdd="";
        for(int i=1;i<details.size();i++){      //starting from 1 skipping the column labels
@@ -203,8 +257,6 @@ string getFullName(string id,vector<string>details){
     return fullName;
 }
 
-
-
 //clean string
 string cleanString(string text){
     for(int i=0;i<text.length();i++){
@@ -215,14 +267,19 @@ string cleanString(string text){
     return text;
 }
 
+
+
 //test & trail
 int main(){
-    ofstream write;
-    write.open("write.csv");
-//match id-address and write output to a file
+    string customerDetailsFile=getDetailsFileName();
+    string customerBillsFile=getBillsFileName();
 
-    vector<string>customerDetails=getCustomersDetails();
-    vector<string>customerBills=getCustomersBills();
+    //ofstream write;
+    //write.open("write.csv");
+    //match id-address and write output to a file
+
+    vector<string>customerDetails=getCustomersDetails(customerDetailsFile);
+    vector<string>customerBills=getCustomersBills(customerBillsFile);
     set<string>address=getAddress();
     map<string,string>phoneMap=mapPhone(customerDetails);
 
@@ -230,7 +287,7 @@ int main(){
     for(auto it=address.begin();it!=address.end();++it){
         showAdd=false;
             if(it==address.begin()){
-                write<<"Id,Name,Phone,Current_Bill,Due,Total\n"<<endl;
+                cout<<"Id,Name,Phone,Current_Bill,Due,Total\n"<<endl;
             }
         vector<string>addressIdList=getAddressId(*it,customerDetails);      //all id of a particular address
         for(int i=0;i<addressIdList.size();i++){
@@ -239,7 +296,7 @@ int main(){
                 if(!showAdd){
                     string add=*it;
                     add=cleanString(add);
-                    write<<"\nADDRESS: "<<add<<endl;
+                    cout<<"\nADDRESS: "<<add<<endl;
                     showAdd=true;
                 }
                 //preparing output data
@@ -248,11 +305,11 @@ int main(){
                 string name=getFullName(id,customerDetails);
 
                 string bill=searchBill(idData);
-                write<<id<<","<<name<<","<<phone<<","<<bill<<endl;
+                cout<<id<<","<<name<<","<<phone<<","<<bill<<endl;
             }
         }
     }
-    write.close();
+    //write.close();
     return 0;
 }
 
